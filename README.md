@@ -6,6 +6,7 @@ A very simple word scrambler created for a teacher friend of mine.
 
 **Note**: the app is only in French, but very easy to translate or adapt to your needs.
 
+[Online version](https://deepnight.github.io/mini-scrambler/) |
 [Download latest version (HTML)](https://github.com/deepnight/mini-scrambler/releases/latest)
 
 
