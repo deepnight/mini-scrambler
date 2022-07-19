@@ -6,4 +6,4 @@
 
 -main Boot
 -dce full
--js bin/client.js
+-js code.js
