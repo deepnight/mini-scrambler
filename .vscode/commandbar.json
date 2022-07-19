@@ -6,7 +6,7 @@
     {
       "text": "📦 Redist",
       "alignment": "right",
-      "command": "haxelib run redistHelper js.hxml -o redist bin data index.html ",
+      "command": "haxelib run redistHelper js.hxml -o redist data index.html -ignore style.css,*.scss,*.map",
       "skipTerminateQuickPick": false,
       "priority": 0
     }
