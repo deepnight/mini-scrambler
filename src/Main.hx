@@ -72,7 +72,7 @@ class Main extends dn.Process {
 	function notify(str:String) {
 		var jNotif = jBody.find("#notif");
 		jNotif.text(str);
-		jNotif.stop(true).hide().slideDown(200).delay(1000).fadeOut(200);
+		jNotif.stop(true).hide().slideDown(200).delay(1400).fadeOut(200);
 	}
 
 	function reset() {

@@ -1277,7 +1277,7 @@ Main.prototype = $extend(dn_Process.prototype,{
 	,notify: function(str) {
 		var jNotif = this.jBody.find("#notif");
 		jNotif.text(str);
-		jNotif.stop(true).hide().slideDown(200).delay(1000).fadeOut(200);
+		jNotif.stop(true).hide().slideDown(200).delay(1400).fadeOut(200);
 	}
 	,reset: function() {
 		this.jResult.val("");
