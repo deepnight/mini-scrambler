@@ -30,6 +30,22 @@ h2 {
   text-align: center;
 }
 
+#footer {
+  padding-top: 16px;
+  width: 800px;
+  margin: auto;
+  text-align: right;
+  opacity: 0.7;
+}
+#footer p {
+  margin: 0;
+  font-size: 8pt;
+}
+#footer a {
+  display: inline-block;
+  white-space: nowrap;
+}
+
 #notif {
   background-color: black;
   color: white;
