@@ -10,10 +10,9 @@ class Main extends dn.Process {
 		var jRun = new J("button#run");
 		var jCopy = new J("button#copy");
 
-		jSource.focus( ev->{
-			reset();
-		});
-		jSource.focus();
+		jSource.keydown( _->reset() );
+		jSource.change( _->reset() );
+		jSource.on( "paste", _->reset() );
 
 		// Scramble list
 		jRun.click( ev->{
@@ -45,6 +44,7 @@ class Main extends dn.Process {
 			notify("Résultat copié dans le presse-papier");
 		});
 
+		jSource.focus();
 		reset();
 	}
 
