@@ -226,13 +226,6 @@ dn_struct_FixedArray.prototype = {
 	}
 	,__class__: dn_struct_FixedArray
 };
-var haxe_ds_StringMap = function() {
-	this.h = Object.create(null);
-};
-haxe_ds_StringMap.__name__ = "haxe.ds.StringMap";
-haxe_ds_StringMap.prototype = {
-	__class__: haxe_ds_StringMap
-};
 var dn_Process = function(parent) {
 	this.tmpProfilerTimes = new haxe_ds_StringMap();
 	this._initOnceDone = false;
@@ -10786,33 +10779,6 @@ h3d_mat_Stencil.prototype = {
 	}
 	,__class__: h3d_mat_Stencil
 };
-var haxe_ds_IntMap = function() {
-	this.h = { };
-};
-haxe_ds_IntMap.__name__ = "haxe.ds.IntMap";
-haxe_ds_IntMap.prototype = {
-	remove: function(key) {
-		if(!this.h.hasOwnProperty(key)) {
-			return false;
-		}
-		delete(this.h[key]);
-		return true;
-	}
-	,keys: function() {
-		var a = [];
-		for( var key in this.h ) if(this.h.hasOwnProperty(key)) a.push(+key);
-		return new haxe_iterators_ArrayIterator(a);
-	}
-	,iterator: function() {
-		return { ref : this.h, it : this.keys(), hasNext : function() {
-			return this.it.hasNext();
-		}, next : function() {
-			var i = this.it.next();
-			return this.ref[i];
-		}};
-	}
-	,__class__: haxe_ds_IntMap
-};
 var hxd_PixelFormat = $hxEnums["hxd.PixelFormat"] = { __ename__:true,__constructs__:null
 	,ARGB: {_hx_name:"ARGB",_hx_index:0,__enum__:"hxd.PixelFormat",toString:$estr}
 	,BGRA: {_hx_name:"BGRA",_hx_index:1,__enum__:"hxd.PixelFormat",toString:$estr}
@@ -19361,6 +19327,33 @@ haxe_ds_EnumValueMap.prototype = $extend(haxe_ds_BalancedTree.prototype,{
 	}
 	,__class__: haxe_ds_EnumValueMap
 });
+var haxe_ds_IntMap = function() {
+	this.h = { };
+};
+haxe_ds_IntMap.__name__ = "haxe.ds.IntMap";
+haxe_ds_IntMap.prototype = {
+	remove: function(key) {
+		if(!this.h.hasOwnProperty(key)) {
+			return false;
+		}
+		delete(this.h[key]);
+		return true;
+	}
+	,keys: function() {
+		var a = [];
+		for( var key in this.h ) if(this.h.hasOwnProperty(key)) a.push(+key);
+		return new haxe_iterators_ArrayIterator(a);
+	}
+	,iterator: function() {
+		return { ref : this.h, it : this.keys(), hasNext : function() {
+			return this.it.hasNext();
+		}, next : function() {
+			var i = this.it.next();
+			return this.ref[i];
+		}};
+	}
+	,__class__: haxe_ds_IntMap
+};
 var haxe_ds_List = function() {
 	this.length = 0;
 };
@@ -19447,6 +19440,13 @@ haxe_ds_ObjectMap.prototype = {
 		return new haxe_iterators_ArrayIterator(a);
 	}
 	,__class__: haxe_ds_ObjectMap
+};
+var haxe_ds_StringMap = function() {
+	this.h = Object.create(null);
+};
+haxe_ds_StringMap.__name__ = "haxe.ds.StringMap";
+haxe_ds_StringMap.prototype = {
+	__class__: haxe_ds_StringMap
 };
 var haxe_exceptions_PosException = function(message,previous,pos) {
 	haxe_Exception.call(this,message,previous);
