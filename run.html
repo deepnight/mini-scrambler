@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>Scrambler</title>
+		<link rel="stylesheet" href="data/css/style.min.css"/>
+		<script type="text/javascript" src="data/js/jquery.min.js"></script>
+	</head>
+
+	<body>
+		<div id="notif"></div>
+
+		<div class="cols">
+			<div class="col">
+				<textarea id="source" placeholder="Liste de mots (un par ligne)"></textarea>
+				<button id="run">Mélanger ➔</button>
+			</div>
+
+			<div class="col">
+				<textarea id="result" readonly="readonly" placeholder="Mots mélangés"></textarea>
+				<button id="copy">Copier 📋</button>
+			</div>
+		</div>
+
+		<canvas id="webgl" globalevents="0"></canvas>
+		<script type="text/javascript" src="bin/client.js"></script>
+	</body>
+</html>
